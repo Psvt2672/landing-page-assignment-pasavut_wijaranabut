@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="images/owndays.ico">
+  <title>OWNDAYS — Campaign Registration</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero__lens-ring hero__lens-ring--outer"></div>
+    <div class="hero__lens-ring hero__lens-ring--inner"></div>
+
+    <div class="hero__content">
+      <div class="logo">
+        <span class="logo__wordmark">OWNDAYS</span>
+      </div>
+
+      <p class="hero__eyebrow">Limited-time Campaign</p>
+      <h1 class="hero__headline">
+        See the World<br />
+        <em>More Clearly.</em>
+      </h1>
+      <p class="hero__description">
+        Register to get your eyes examined by the experts for free and participate our upcoming in-store events.
+      </p>
+      <a href="#register" class="hero__cta">Claim Your Free Exam</a>
+    </div>
+
+    <div class="hero__scroll-hint">
+      <span>Register below</span>
+      <svg width="16" height="24" viewBox="0 0 16 24" fill="none">
+        <path d="M8 2v20M2 15l6 7 6-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Register -->
+  <section class="register" id="register">
+    <div class="register__container">
+
+      <div class="register__intro">
+        <h2 class="register__title">Reserve Your Spot</h2>
+        <p class="register__subtitle">Fill in your details and we'll be in touch.</p>
+        <ul class="register__perks">
+          <li>
+            <svg width="18" height="18" viewBox="0 0 18 18"><circle cx="9" cy="9" r="8.25" stroke="#D4A843" stroke-width="1.5"/><path d="M5.5 9l2.5 2.5 5-5" stroke="#D4A843" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Free comprehensive eye examination
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 18 18"><circle cx="9" cy="9" r="8.25" stroke="#D4A843" stroke-width="1.5"/><path d="M5.5 9l2.5 2.5 5-5" stroke="#D4A843" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Access to exclusive in-store events
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 18 18"><circle cx="9" cy="9" r="8.25" stroke="#D4A843" stroke-width="1.5"/><path d="M5.5 9l2.5 2.5 5-5" stroke="#D4A843" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Priority booking at your preferred store
+          </li>
+        </ul>
+      </div>
+
+      <div class="register__card">
+        <form id="registrationForm">
+
+          <!-- Name -->
+          <div class="field" id="field-name">
+            <label class="field__label" for="name">Name <span class="field__req">*</span></label>
+            <input class="field__input" type="text" id="name" name="name" placeholder="Name" autocomplete="name" />
+            <p class="field__error" id="error-name"></p>
+          </div>
+
+          <!-- Email -->
+          <div class="field" id="field-email">
+            <label class="field__label" for="email">Email Address <span class="field__req">*</span></label>
+            <input class="field__input" type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" />
+            <p class="field__error" id="error-email"></p>
+          </div>
+
+          <!-- Phone -->
+          <div class="field" id="field-phone">
+            <label class="field__label" for="phone">Phone Number <span class="field__req">*</span></label>
+            <input class="field__input" type="tel" id="phone" name="phone" placeholder="0000000000" autocomplete="tel" />
+            <p class="field__error" id="error-phone"></p>
+          </div>
+
+          <!-- Preferred Store -->
+          <div class="field" id="field-store">
+            <label class="field__label" for="store">Preferred Store <span class="field__req">*</span></label>
+            <div class="field__select-wrap">
+              <select class="field__input field__select" id="store" name="store">
+                <option value=""></option>
+                <option value="centralramindra">Central Ramindra</option>
+                <option value="fashionisland">Fashion Island</option>
+                <option value="centralworld">CentralWorld</option>
+                <option value="megabangna">Mega Bangna</option>
+                <option value="centralplazawestgest">CentralPlaza Westgate</option>
+              </select>
+              <svg class="field__chevron" width="14" height="14" viewBox="0 0 14 14"><path d="M2 4.5l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+            </div>
+            <p class="field__error" id="error-store"></p>
+          </div>
+
+          <!-- Preferred Date -->
+          <div class="field" id="field-date">
+            <label class="field__label" for="date">Preferred Date <span class="field__req">*</span></label>
+            <input class="field__input" type="date" id="date" name="date" />
+            <p class="field__error" id="error-date"></p>
+          </div>
+
+          <!-- Submit -->
+          <button class="submit-btn" type="submit" id="submitBtn">
+            <span class="submit-btn__label">Register</span>
+            <span class="submit-btn__spinner" aria-hidden="true"></span>
+          </button>
+
+        </form>
+
+        <!-- Success State -->
+        <div class="success-state" id="successState" hidden>
+          <div class="success-state__icon">
+            <svg width="40" height="40" viewBox="0 0 40 40"><circle cx="20" cy="20" r="19" stroke="#D4A843" stroke-width="2"/><path d="M11 20l7 7 12-12" stroke="#D4A843" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3 class="success-state__title">Registration Completed!</h3>
+          <p class="success-state__message">
+            We've received your registration.<br>
+            Check your email for the appointment.
+          </p>
+        </div>
+
+      </div><!-- /.register__card -->
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <span>COPYRIGHT (C) OWNDAYS co., ltd. ALL RIGHTS RESERVED.</span>
+    <span class="footer__dot">·</span>
+    <span>Campaign ends 31 August 2026</span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
